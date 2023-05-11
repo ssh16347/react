@@ -1,0 +1,157 @@
+html, html * {
+    text-transform: capitalize;//앞부분만 대문자
+    padding:0; margin:0;
+    box-sizing:border-box;
+    font-family:Gotham, Helvetica Neue, Helvetica, Arial, " sans-serif";
+    body{
+        margin:0 auto;//가운데 정렬
+        background:#dbecf1;
+        header{
+        padding:32px;
+            .style-logo{
+            margin-left:auto;margin-right:auto;
+            display:block;width:192px;
+            }
+            .style-nav{
+                ul{
+                    li{
+                        a{
+                         text-decoration:none;
+                         color:#2f322a;
+                         text-align:center;   
+                         display:block;
+                         text-transform:uppercase;
+                         padding:8px;
+                        }
+                    }
+                }
+            }
+
+        }
+        img{
+        width:100%;
+        max-width:100%;//화면의 늘거나 줄을때 가로폭에 100%로 fit
+        height:auto;//높이 자동
+        }
+        footer{
+        padding:20px 30px;//위 20px 좌우 30px
+        background:#dbecf1;
+        }
+    }
+}
+ul,ol,li{
+list-style:none;
+}
+.hero{
+    background-image:url("../../public/images/hero.jpg") ;
+    background-size:cover;
+    /*적용한 내용물에 페딩과 마진을 포함해서 높이가 변경*/
+    padding:20px 20px 50px 20px;
+    color:#fff;
+    text-align:center;
+}
+h1{
+    font-size:57px; text-transform:uppercase;
+    font-weight:200;/*400~900까지 차이가 잘 안남*/
+    margin-bottom:60px;
+}
+h2{
+    font-size:30px; text-transform:uppercase;
+    font-weight:200;/*400~900까지 차이가 잘 안남*/
+    margin-bottom:23px;
+}
+h3{
+    font-size:16px; text-transform:uppercase;
+    font-weight:200;/*400~900까지 차이가 잘 안남*/
+    margin-bottom:120px;
+}
+h4{
+    font-size:16px; text-transform:uppercase;
+    font-weight:200;/*400~900까지 차이가 잘 안남*/
+    margin-bottom:35px;
+}
+p{
+    font-size:16px; font-weight:400; margin-bottom:35px;
+}
+.button{
+    border:2px #FFFFFF solid;
+    padding:8px 30px;
+    border-radius:30px;
+    color:#fff;
+    text-decoration:none;
+}
+.info-box-tan{
+    background-color:#b9a88e;
+    color:#fff;
+    padding:30px 20px 60px;
+    text-align:center;
+}
+.info-box-dark{
+    background-color:#2d2d35;
+    color:#fff;
+    padding:30px 20px 60px;
+    text-align:center;
+}
+footer{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    .footer-text{
+        text-align:center;
+        font-size:13px;
+        margin-bottom:20px;
+    }
+}
+.col{
+width:100%;
+}
+/*.row:before, .row:after{
+    content:"";
+    display:table;
+}
+.row:after{
+    clear:both;
+}*/
+
+/*태블릿 모드*/
+@media (min-width:768px){//최소한의 크기가 768px은 그이상이란 얘기
+
+    body{
+        max-width:778px;
+        .style-nav ul{
+            text-align:center;
+            li{display:inline-block;}
+        } 
+        h1{
+            font-size:40px; margin-bottom:90px;
+        }
+        h2{
+            margin-bottom:16px;
+        }
+        .col-md-one-half{width:50%;}
+        .col{
+            float:left;
+            padding:0px 7px 14px;
+        }
+    }
+
+
+}/*태블릿 end*/
+
+/*pc */
+@media (min-width:1024px){
+    body{
+        max-width:1200px;
+        .style-logo{
+            float:left;
+        }
+        .style-nav{
+            float:right;
+        }
+        .col-lg-one-fourth{
+            width:25%;
+        }
+    }
+   
+}
+
